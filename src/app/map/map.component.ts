@@ -70,12 +70,15 @@ export class MapComponent implements AfterViewInit {
   }
 
   private centerMap() {
-    // Create a LatLngBounds object to encompass all the marker locations
+    // Creer une vue qui englobe toutes les capitales
     const bounds = L.latLngBounds(
       this.markers.map((marker) => marker.getLatLng())
     );
 
-    // Fit the map view to the bounds
     this.map.fitBounds(bounds);
+  }
+
+  onLocateMe() {
+    console.log('Tu es juste la !');
   }
 }

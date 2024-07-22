@@ -1,1 +1,16 @@
-<app-map></app-map>
+<h1>App !</h1>
+
+<nav>
+  <a routerLink="/map" routerLinkActive="active" ariaCurrentWhenActive="page"
+    >Map</a
+  >
+  <a
+    routerLink="/town-pannel"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    >Town Pannel</a
+  >
+</nav>
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
