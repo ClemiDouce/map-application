@@ -20,3 +20,9 @@ Plus léger et facile d'accès que l'API de GoogleMap par exemple, ca m'as paru 
 Je ne suis pas forcément très doué en design, ce qui donne ce design très sommaire.
 
 J'ai rarement touché aux ReactiveForm de Angular. J'ai essayé de mettre en place des validator, mais je n'ai pas réussi a faire en sorte que les messages d'erreurs s'affichent dynamiquement>.
+
+Mes lacunes sur Angular que je n'ai pas pratiqué depuis longtemps m'ont aussi empeché de pouvoir faire la modification des données des villes, ainsi que la synchronisation entre le deuxieme écran et le premier.
+
+## Remerciement
+
+Malgré tout ca, merci de m'avoir permis de pratiquer ce test technique.
