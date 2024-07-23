@@ -34,7 +34,8 @@ export class TownFormComponent {
       console.log('Bravo !');
     } else {
       console.log('Malheureusement, non');
-      console.log(this.cityForm);
+      this.errorMessage =
+        "Il y a un problème dans votre formulaire, reverifiez vos informations, et re-essayer d'ajouter votre ville";
     }
   }
 }

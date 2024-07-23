@@ -1,6 +1,17 @@
 <li>
+  @if (modifying) {
+  <p class="card-title">Nom: <input type="text" [value]="newData.name" /></p>
+  <p>
+    Population: <input type="number" [value]="newData.population" /> habitants
+  </p>
+  <p>Latitude: <input type="number" [value]="newData.latitude" /></p>
+  <p>Longitude: <input type="number" [value]="newData.longitude" /></p>
+  <button (click)="onValidateChange()">Valider Changement</button>
+  } @else {
   <p class="card-title">Nom: {{ townData.name }}</p>
   <p>Population: {{ townData.population.toLocaleString("fr-FR") }} habitants</p>
   <p>Latitude: {{ townData.latitude }}</p>
   <p>Longitude: {{ townData.longitude }}</p>
+  <button (click)="onTownModify()">Modifier</button>
+  }
 </li>

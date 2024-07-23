@@ -60,10 +60,13 @@ export class TownsService {
   modifyTown(id: number, modification: Town) {
     let town = this.towns.find((item) => item.id === id);
     if (town !== undefined) {
+      console.log('Trouvé, on change tout maintenant');
+      console.log(modification);
       town.name = modification.name;
       town.population = modification.population;
       town.latitude = modification.latitude;
       town.longitude = modification.longitude;
     }
+    console.log(town);
   }
 }
