@@ -1,0 +1,21 @@
+form {
+  padding: 20px;
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  background-color: #faf9f6;
+}
+
+input {
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}

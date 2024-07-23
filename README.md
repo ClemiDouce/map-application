@@ -1,27 +1,22 @@
-# BeehiveTechnicalTest
+# BeecomingTechnicalTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Ce projet est un test technique pour l'entreprise [Beecoming](https://beecoming.fr/)
 
-## Development server
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Lancement du projet
 
-## Code scaffolding
+Lancez la commande `ng serve` pour lancer le serveur de dev.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Description du projet
 
-## Build
+Le but du projet était de faire une application permettant de voir une carte du monde, de pouvoir ajouter des villes (nom, population) a partir de leur longitude et lattitude pour ensuite voir des marqueur sur la carte.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Pour la visualisation de carte, j'ai choisis Leaflet, un service permettant de faire tout ce que j'avais besoin, c'est a dire avoir une carte, des marqueurs, des légendes en cliquant sur les marqueurs, ainsi que l'option de pouvoir se localiser.
+Plus léger et facile d'accès que l'API de GoogleMap par exemple, ca m'as paru etre un bon choix pour ce test
 
-## Running unit tests
+## Problemes rencontrés
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Je ne suis pas forcément très doué en design, ce qui donne ce design très sommaire.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+J'ai rarement touché aux ReactiveForm de Angular. J'ai essayé de mettre en place des validator, mais je n'ai pas réussi a faire en sorte que les messages d'erreurs s'affichent dynamiquement>.

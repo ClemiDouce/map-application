@@ -1,6 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { TownsService } from '../towns.service';
 import * as L from 'leaflet';
-import * as capitalsData from '../../assets/capital_list.json';
+
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
 const shadowUrl = 'assets/marker-shadow.png';
@@ -27,7 +28,7 @@ export class MapComponent implements AfterViewInit {
   private map;
   private markers: L.Marker[] = [];
 
-  constructor() {
+  constructor(private townService: TownsService) {
     this.markers = [];
   }
 
@@ -38,8 +39,7 @@ export class MapComponent implements AfterViewInit {
   }
 
   private initMap(): void {
-    //Initialise la map Leaflet
-    this.map = L.map('map', {
+    let map = new L.Map('map', {
       center: [39.8282, -98.5795],
       zoom: 3,
     });
@@ -54,17 +54,32 @@ export class MapComponent implements AfterViewInit {
       }
     );
 
-    tiles.addTo(this.map);
+    tiles.addTo(map);
+    map.on('locationfound', (e) => {
+      var radius = e.accuracy;
+
+      L.marker(e.latlng).addTo(map).bindPopup('Vous êtes ici !').openPopup();
+
+      L.circle(e.latlng, { radius }).addTo(this.map);
+    });
+    map.on('locationerror', (e) => {
+      console.log(e.message);
+    });
+
+    this.map = map;
   }
 
   private addMarkers() {
     // Ajouter les markers contenu dans le fichier json
-    capitalsData.capitals.forEach((element) => {
-      console.log(element.name);
-      var marker = L.marker([element.lat, element.long]).addTo(this.map);
-      marker
-        .bindPopup(`<b>Name : ${element.name}</b>\nPop: ${element.population}`)
-        .openPopup();
+    this.townService.towns.forEach((element) => {
+      var marker = L.marker([element.latitude, element.longitude]).addTo(
+        this.map
+      );
+      marker.bindPopup(
+        `<b>Name : ${
+          element.name
+        }</b> <br>Population: ${element.population.toLocaleString('fr-FR')}`
+      );
       this.markers.push(marker);
     });
   }
@@ -79,6 +94,6 @@ export class MapComponent implements AfterViewInit {
   }
 
   onLocateMe() {
-    console.log('Tu es juste la !');
+    this.map.locate({ setView: true, maxZoom: 16, enableHighAccuracy: true });
   }
 }

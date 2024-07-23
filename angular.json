@@ -28,11 +28,14 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "node_modules/leaflet/dist/images/",
+                "input": "./node_modules/leaflet/dist/images/",
                 "output": "./assets/"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "./node_modules/leaflet/dist/leaflet.css"
+            ],
             "scripts": []
           },
           "configurations": {

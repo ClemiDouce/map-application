@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { MapComponent } from './map/map.component';
-import { CapitalPannelComponent } from './capital-pannel/capital-pannel.component';
+import { TownPannelComponent } from './town-pannel/town-pannel.component';
 
 export const routes: Routes = [
-  { path: 'town-pannel', component: CapitalPannelComponent },
+  { path: 'town-pannel', component: TownPannelComponent },
   { path: 'map', component: MapComponent },
 ];

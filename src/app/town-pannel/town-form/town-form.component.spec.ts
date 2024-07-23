@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CapitalPannelComponent } from './capital-pannel.component';
+import { TownFormComponent } from './town-form.component';
 
-describe('CapitalPannelComponent', () => {
-  let component: CapitalPannelComponent;
-  let fixture: ComponentFixture<CapitalPannelComponent>;
+describe('TownFormComponent', () => {
+  let component: TownFormComponent;
+  let fixture: ComponentFixture<TownFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CapitalPannelComponent]
+      imports: [TownFormComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CapitalPannelComponent);
+    fixture = TestBed.createComponent(TownFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

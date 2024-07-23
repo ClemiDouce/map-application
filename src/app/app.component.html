@@ -1,16 +1,30 @@
 <h1>App !</h1>
 
-<nav>
-  <a routerLink="/map" routerLinkActive="active" ariaCurrentWhenActive="page"
-    >Map</a
-  >
-  <a
-    routerLink="/town-pannel"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Town Pannel</a
-  >
+<nav class="menu">
+  <ul>
+    <li>
+      <a
+        class="lien-menu"
+        routerLink="/map"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Map</a
+      >
+    </li>
+
+    <li>
+      <a
+        class="lien-menu"
+        routerLink="/town-pannel"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Town Pannel</a
+      >
+    </li>
+  </ul>
 </nav>
 
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>
+
+<!-- <app-map></app-map> -->

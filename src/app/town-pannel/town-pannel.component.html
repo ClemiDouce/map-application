@@ -1,0 +1,11 @@
+<div class="town-pannel">
+  <town-form></town-form>
+
+  <div class="town-list">
+    <ul>
+      <li *ngFor="let town of townService.towns">
+        <town-card [townData]="town"></town-card>
+      </li>
+    </ul>
+  </div>
+</div>

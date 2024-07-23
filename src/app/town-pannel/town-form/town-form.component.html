@@ -1,0 +1,21 @@
+<form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+  <h3>Ajouter une ville</h3>
+  <label>
+    Nom :
+    <input type="text" formControlName="name" />
+  </label>
+  <label>
+    Population:
+    <input type="number" formControlName="population" />
+  </label>
+  <label>
+    Longitude:
+    <input type="number" formControlName="longitude" />
+  </label>
+  <label>
+    Latitude:
+    <input type="number" formControlName="latitude" />
+  </label>
+  <p>{{ errorMessage }}</p>
+  <button type="submit">Ajouter</button>
+</form>
